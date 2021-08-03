@@ -71,6 +71,7 @@
     <Content Include="Login.aspx" />
     <Content Include="SystemAdmin\AccountingDetail.aspx" />
     <Content Include="SystemAdmin\AccountingList.aspx" />
+    <Content Include="SystemAdmin\UserChangePWD.aspx" />
     <Content Include="SystemAdmin\UserDetail.aspx" />
     <Content Include="SystemAdmin\UserInfo.aspx" />
     <Content Include="UserControls\ucPager.ascx" />
@@ -123,6 +124,13 @@
     </Compile>
     <Compile Include="SystemAdmin\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SystemAdmin\UserChangePWD.aspx.cs">
+      <DependentUpon>UserChangePWD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemAdmin\UserChangePWD.aspx.designer.cs">
+      <DependentUpon>UserChangePWD.aspx</DependentUpon>
     </Compile>
     <Compile Include="SystemAdmin\UserDetail.aspx.cs">
       <DependentUpon>UserDetail.aspx</DependentUpon>

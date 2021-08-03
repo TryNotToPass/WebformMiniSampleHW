@@ -10,7 +10,7 @@
                     <asp:TextBox ID="txtAccount" runat="server" TextMode="SingleLine"></asp:TextBox>
                 <br />
                 <asp:PlaceHolder ID="PlaceHolderPWD" runat="server" Visible="false">
-                     Password: 
+                    Password: 
                     <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                     <br />
                     Password double check:
@@ -26,6 +26,9 @@
                 <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
                 &nbsp;
                 <asp:Button ID="btnDelete" runat="server" Text="Del" OnClick="btnDelete_Click" />
+                &nbsp;
+                <br />
+                <a href="UserChangePWD.aspx">進入密碼變更頁面</a>
                 <br />
                 <asp:Literal ID="ltMsg" runat="server"></asp:Literal>
             </td>

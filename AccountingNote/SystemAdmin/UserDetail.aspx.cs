@@ -56,6 +56,8 @@ namespace AccountingNote.SystemAdmin
                         }
                         else
                         {
+                            string pwdcText = this.Request.QueryString["Txt"];
+                            if (!string.IsNullOrWhiteSpace(pwdcText)) this.ltMsg.Text = "密碼變更完成！";
                             this.txtAccount.Text = drAccounting["Account"].ToString();
                             this.txtName.Text = drAccounting["Name"].ToString();
                             this.txtMail.Text = drAccounting["Email"].ToString();
@@ -67,6 +69,9 @@ namespace AccountingNote.SystemAdmin
                         this.btnSave.Visible = false;
                         this.btnDelete.Visible = false;
                     }
+
+
+
                 }
             }
         }

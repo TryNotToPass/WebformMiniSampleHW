@@ -20,7 +20,7 @@ namespace AccountingNote.SystemAdmin
                 return;
             }
 
-            string account = this.Session["UserLoginInfo"] as string;
+            //string account = this.Session["UserLoginInfo"] as string;
             var currentUser = AuthManager.GetCurrentUser();
 
             if (currentUser == null)                             // 如果帳號不存在，導至登入頁

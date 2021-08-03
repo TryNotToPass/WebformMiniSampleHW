@@ -205,6 +205,37 @@ namespace AccountingNote.DBSource
             }
         }
 
+        public static bool UpdateUserPassword(string id, string pwd)
+        {
+
+            string connStr = DBHelper.GetConnectionString();
+            string dbCommand =
+                $@" UPDATE [UserInfo]
+                    SET
+                        PWD     = @pwd
+                    WHERE 
+                        ID = @id;";
+
+            List<SqlParameter> paramList = new List<SqlParameter>();
+            paramList.Add(new SqlParameter("@id", id));
+            paramList.Add(new SqlParameter("@pwd", pwd));
+
+            try
+            {
+                int effectRows = DBHelper.ModifyData(connStr, dbCommand, paramList);
+
+                if (effectRows == 1)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                Logger.WriteLog(ex);
+                return false;
+            }
+        }
+
         private static string UIDCreator()
         {
             string connectionString = DBHelper.GetConnectionString();
