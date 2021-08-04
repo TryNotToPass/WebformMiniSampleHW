@@ -8,17 +8,17 @@ using AccountingNote.Auth;
 using AccountingNote.DBSource;
 using System.Data;
 
-namespace AccountingNote
+namespace AccountingNote.SystemAdmin
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class UserList : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             this.Title = "使用者清單頁";
-            //Admin mainMaster = this.Master as Admin;
-            //mainMaster.MyTitle = "使用者資訊編輯頁";
+            Admin mainMaster = this.Master as Admin;
+            mainMaster.MyTitle = "使用者清單頁";
 
-            if (!AuthManager.IsLogined()) 
+            if (!AuthManager.IsLogined())
             {
                 Response.Redirect("/Login.aspx");
                 return;
@@ -96,7 +96,6 @@ namespace AccountingNote
             }
             return dtPaged;
         }
-
 
     }
 }

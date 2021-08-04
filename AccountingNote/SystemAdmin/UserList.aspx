@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SystemAdmin/Admin.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="AccountingNote.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SystemAdmin/Admin.Master" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="AccountingNote.SystemAdmin.UserList" %>
 
 <%@ Register Src="~/UserControls/ucPager.ascx" TagPrefix="uc1" TagName="ucPager" %>
 
@@ -21,5 +21,4 @@
     <uc1:ucpager runat="server" id="ucPager" PageSize="10" CurrentPage="1" Url="/SystemAdmin/UserList.aspx" />
     <br />
     <asp:Button ID="btn_addUser" runat="server" Text="新增使用者" OnClick="btn_addUser_Click" />
-
 </asp:Content>
