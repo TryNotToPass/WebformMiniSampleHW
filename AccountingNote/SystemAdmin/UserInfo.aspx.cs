@@ -15,6 +15,9 @@ namespace AccountingNote.SystemAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.Title = "使用者資訊主頁";
+            Admin mainMaster = this.Master as Admin;
+            mainMaster.MyTitle = "使用者資訊主頁";
             if (!this.IsPostBack)                           // 可能是按鈕跳回本頁，所以要判斷 postback
             {
                 if (!AuthManager.IsLogined())                // 如果尚未登入，導至登入頁

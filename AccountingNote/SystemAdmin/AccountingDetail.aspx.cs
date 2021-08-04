@@ -13,6 +13,9 @@ namespace AccountingNote.SystemAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.Title = "流水帳編輯頁";
+            Admin mainMaster = this.Master as Admin;
+            mainMaster.MyTitle = "流水帳編輯頁";
             // check is logined
             if (!AuthManager.IsLogined())
             {

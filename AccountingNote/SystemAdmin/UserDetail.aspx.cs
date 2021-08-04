@@ -14,6 +14,9 @@ namespace AccountingNote.SystemAdmin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.Title = "使用者資訊編輯頁";
+            Admin mainMaster = this.Master as Admin;
+            mainMaster.MyTitle = "使用者資訊編輯頁";
             if (!AuthManager.IsLogined())
             {
                 Response.Redirect("/Login.aspx");

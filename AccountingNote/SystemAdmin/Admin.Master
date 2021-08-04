@@ -15,7 +15,7 @@
         <table>
             <tr>
                 <td colspan="2">
-                    <h1>流水帳管理系統 - 後台</h1>
+                    <h1><%=this.MyTitle %></h1>
                 </td>
             </tr>
             <tr>

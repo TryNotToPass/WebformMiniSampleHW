@@ -10,6 +10,8 @@ namespace AccountingNote.SystemAdmin
 {
     public partial class Admin : System.Web.UI.MasterPage
     {
+        public string MyTitle { get; set; } = String.Empty;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             // 如果尚未登入，導至登入頁
