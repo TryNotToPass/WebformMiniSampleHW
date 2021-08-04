@@ -124,7 +124,7 @@ namespace AccountingNote.SystemAdmin
             List<string> msgList = new List<string>();
 
             // Type
-            if (this.ddlActType.SelectedValue != "0" && 
+            if (this.ddlActType.SelectedValue != "0" &&
                 this.ddlActType.SelectedValue != "1")
             {
                 msgList.Add("Type must be 0 or 1.");
@@ -139,7 +139,7 @@ namespace AccountingNote.SystemAdmin
                 if (!int.TryParse(this.txtAmount.Text, out tempInt))
                     msgList.Add("Amount must be a number.");
 
-                if(tempInt < 0 || tempInt > 1000000)
+                if (tempInt < 0 || tempInt > 1000000)
                     msgList.Add("Amount must between 0 and 1,000,000 .");
             }
 
@@ -166,5 +166,6 @@ namespace AccountingNote.SystemAdmin
 
             Response.Redirect("/SystemAdmin/AccountingList.aspx");
         }
+
     }
 }
