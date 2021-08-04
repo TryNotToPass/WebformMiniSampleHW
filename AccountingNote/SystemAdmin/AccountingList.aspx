@@ -41,7 +41,7 @@
                 </asp:GridView>
                 <asp:Literal runat="server" ID="ltPager">
                 </asp:Literal>
-                <uc1:ucpager runat="server" id="ucPager" PageSize="10" CurrentPage="1" TotalSize="10" Url="AccountingList.aspx" />
+                <uc1:ucpager runat="server" id="ucPager" PageSize="3" CurrentPage="1" Url="/SystemAdmin/AccountingList.aspx" />
                 <br />
                 <asp:Label ID="Label1" runat="server" Text="總金錢變更：尚無"></asp:Label>
                 <asp:PlaceHolder ID="plcNoData" runat="server" Visible="false">

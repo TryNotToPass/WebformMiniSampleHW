@@ -54,7 +54,7 @@ namespace AccountingNote
             Response.Redirect("/SystemAdmin/UserDetail.aspx");
         }
 
-        //下面兩個王八考慮進類別庫
+        //下面兩個王八好像進不了類別庫
         private int GetCurrentPage()
         {
             string pageText = Request.QueryString["Page"];
@@ -73,8 +73,8 @@ namespace AccountingNote
         {
             DataTable dtPaged = dt.Clone();
 
-            int startIndex = (this.GetCurrentPage() - 1) * 10;
-            int endIndex = (this.GetCurrentPage()) * 10;
+            int startIndex = (this.GetCurrentPage() - 1) * this.ucPager.PageSize;
+            int endIndex = (this.GetCurrentPage()) * this.ucPager.PageSize;
             if (endIndex > dt.Rows.Count)
                 endIndex = dt.Rows.Count;
 

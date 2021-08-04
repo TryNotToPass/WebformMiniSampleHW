@@ -18,7 +18,7 @@
             </asp:TemplateField>
         </Columns>
     </asp:GridView>
-    <uc1:ucpager runat="server" id="ucPager" PageSize="10" CurrentPage="1" TotalSize="10" Url="UserList.aspx" />
+    <uc1:ucpager runat="server" id="ucPager" PageSize="10" CurrentPage="1" Url="/SystemAdmin/UserList.aspx" />
     <br />
     <asp:Button ID="btn_addUser" runat="server" Text="新增使用者" OnClick="btn_addUser_Click" />
 

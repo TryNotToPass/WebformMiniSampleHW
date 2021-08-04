@@ -15,6 +15,15 @@ namespace AccountingNote.UserControls
     {
 
         /// <summary>
+        /// aLinkF 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor aLinkF;
+
+        /// <summary>
         /// ltPager 控制項。
         /// </summary>
         /// <remarks>
@@ -22,5 +31,23 @@ namespace AccountingNote.UserControls
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltPager;
+
+        /// <summary>
+        /// aLinkL 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor aLinkL;
+
+        /// <summary>
+        /// ltmsg 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltmsg;
     }
 }

@@ -20,15 +20,24 @@ namespace AccountingNote.UserControls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            //this.Bind();
+            
         }
         public void Bind()
         {
             int totalPages = this.GetTotalPages();
-            this.ltPager.Text = $"共 {this.TotalSize} 筆，共 {totalPages} 頁，目前在第 {this.GetCurrentPage()} 頁<br/>";
-            for (var i = 1; i <= totalPages; i++)
+            int cp = GetCurrentPage();
+            int firstp = cp - 1;
+
+            this.aLinkF.HRef = $"{this.Url}?page=1";
+            this.aLinkL.HRef = $"{this.Url}?page={totalPages}";
+
+            this.ltmsg.Text = $"共 {this.TotalSize} 筆，共 {totalPages} 頁，目前在第 {this.GetCurrentPage()} 頁<br/>";
+            for (var i = firstp; i <= cp + 1; i++)
             {
-                this.ltPager.Text += $"<a href='{this.Url}?page={i}'>{i}</a>&nbsp;";
+                if (i == firstp+1) this.ltPager.Text += $"&nbsp {i} &nbsp;";
+                else if (i <= 0) cp += 1;
+                else if (i > totalPages) break;
+                else this.ltPager.Text += $"<a href='{this.Url}?page={i}'>{i}</a>&nbsp;";
             }
         }
 

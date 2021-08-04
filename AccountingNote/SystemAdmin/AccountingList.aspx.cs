@@ -79,8 +79,8 @@ namespace AccountingNote.SystemAdmin
         {
             DataTable dtPaged = dt.Clone();
 
-            int startIndex = (this.GetCurrentPage() - 1) * 10;
-            int endIndex = (this.GetCurrentPage()) * 10;
+            int startIndex = (this.GetCurrentPage() - 1) * this.ucPager.PageSize;
+            int endIndex = (this.GetCurrentPage()) * this.ucPager.PageSize;
             if (endIndex > dt.Rows.Count)
                 endIndex = dt.Rows.Count;
 
