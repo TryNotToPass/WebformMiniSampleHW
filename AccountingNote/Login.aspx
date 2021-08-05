@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+<center>
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>使用者登入</title>
@@ -10,14 +11,22 @@
 <body>
     <form id="form1" runat="server">
         <asp:PlaceHolder runat="server" ID="plcLogin" Visible="false">
-            Account:
-            <asp:TextBox ID="txtAccount" runat="server"></asp:TextBox>
-            <br />
-            Password:
-            <asp:TextBox ID="txtPWD" runat="server" TextMode="Password"></asp:TextBox><br />
-            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /><br />
+            <table>
+                <tr>
+                    <td>帳號:</td>
+                    <td><asp:TextBox ID="txtAccount" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>密碼:</td>
+                    <td><asp:TextBox ID="txtPWD" runat="server" TextMode="Password"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" /></td>
+                </tr>
+            </table>
             <asp:Literal ID="ltlMsg" runat="server"></asp:Literal>
         </asp:PlaceHolder>
     </form>
 </body>
+</center>
 </html>

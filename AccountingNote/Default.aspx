@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+<center>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>流水帳管理系統</title>
@@ -21,4 +22,5 @@
         </div>
     </form>
 </body>
+</center>
 </html>

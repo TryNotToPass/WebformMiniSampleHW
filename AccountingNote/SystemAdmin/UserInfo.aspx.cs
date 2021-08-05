@@ -36,6 +36,7 @@ namespace AccountingNote.SystemAdmin
 
                 this.ltAccount.Text = currentUser.Account;
                 this.ltName.Text = currentUser.Name;
+                this.ltMsg.Text = $"歡迎使用者 {currentUser.Name} ！";
                 this.ltEmail.Text = currentUser.Email;
             }
         }

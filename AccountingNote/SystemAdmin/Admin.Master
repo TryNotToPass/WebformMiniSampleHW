@@ -10,9 +10,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style>
-        table{
-            background-color: #97CBFF;
-        }
         .alink {
             background-color: #DEFFAC;
         }
@@ -20,19 +17,19 @@
 </head>
 <body style="background-color: #BBFFBB;">
     <form id="form1" runat="server">
-        <table>
+        <table width = "900" style="background-color: #81C0C0">
             <tr>
                 <td colspan="2">
-                    <h1><%=this.MyTitle %></h1>
+                    <h1 align="center"><%=this.MyTitle %></h1>
                 </td>
             </tr>
             <tr>
-                <td>
+                <td align="center" width = "200" style="background-color: #548C00">
                     <a href="UserInfo.aspx" class="alink">使用者資訊</a> <br />
                     <a href="AccountingList.aspx" class="alink"> 流水帳管理 </a><br />
                     <a href="UserList.aspx" class="alink">會員管理</a>
                 </td>
-                <td>
+                <td align="center" style="background-color: #C4E1FF">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>                    
                 </td>
