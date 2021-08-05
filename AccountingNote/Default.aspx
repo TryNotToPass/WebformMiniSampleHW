@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <h1>流水帳管理系統</h1>
-            <h5>本系統乃登記使用者的收入與支出</h5>
+            <h3>本系統乃登記使用者的收入與支出</h3>
             <asp:Literal ID="ltmsg" runat="server"></asp:Literal>
             <br />
             <br />
