@@ -17,16 +17,21 @@ namespace AccountingNote.SystemAdmin
             this.Title = "使用者資訊編輯頁";
             Admin mainMaster = this.Master as Admin;
             mainMaster.MyTitle = "使用者資訊編輯頁";
-            if (!AuthManager.IsLogined())
+
+            string account = this.Session["UserLoginInfo"] as string;
+            string newbeein = this.Session["FromUserDetail"] as string;
+            var currentUser = AuthManager.GetCurrentUser();
+
+            if (newbeein != null && newbeein.CompareTo("yesfromdetail") == 0)  //若使用者是第一位，則破例讓他創
+            {
+            
+            }
+            else if (!AuthManager.IsLogined())
             {
                 Response.Redirect("/Login.aspx");
                 return;
             }
-
-            string account = this.Session["UserLoginInfo"] as string;
-            var currentUser = AuthManager.GetCurrentUser();
-
-            if (currentUser == null)                             // 如果帳號不存在，導至登入頁
+            else if (currentUser == null || account == null)
             {
                 this.Session["UserLoginInfo"] = null;
                 Response.Redirect("/Login.aspx");
@@ -35,12 +40,12 @@ namespace AccountingNote.SystemAdmin
 
             if (!this.IsPostBack)
             {
-                // Check is create mode or edit mode
                 if (this.Request.QueryString["ID"] == null)
                 {
                     this.btnDelete.Visible = false;
                     //若要新增使用者，那就要讓他們打密碼，更新無法打密碼
                     this.PlaceHolderPWD.Visible = true;
+                    this.pwLink.Visible = false;
                 }
                 else
                 {
@@ -53,7 +58,7 @@ namespace AccountingNote.SystemAdmin
 
                         if (drAccounting == null)
                         {
-                            this.ltMsg.Text = "Data doesn't exist";
+                            this.ltMsg.Text = "資料不存在";
                             this.btnSave.Visible = false;
                             this.btnDelete.Visible = false;
                         }
@@ -68,7 +73,7 @@ namespace AccountingNote.SystemAdmin
                     }
                     else
                     {
-                        this.ltMsg.Text = "ID is required.";
+                        this.ltMsg.Text = "需要ID";
                         this.btnSave.Visible = false;
                         this.btnDelete.Visible = false;
                     }
@@ -90,7 +95,12 @@ namespace AccountingNote.SystemAdmin
 
 
             UserInfoModel currentUser = AuthManager.GetCurrentUser();
-            if (currentUser == null)
+            string isnew = this.Session["FromUserDetail"] as string;
+            if (isnew != null && isnew.CompareTo("yesfromdetail") == 0)  //若使用者是第一位，則破例讓他創
+            {
+                //this.Session["UserLoginInfo"] = null;
+            }
+            else if (currentUser == null)
             {
                 Response.Redirect("/Login.aspx");
                 return;
@@ -129,6 +139,7 @@ namespace AccountingNote.SystemAdmin
                 if (string.IsNullOrWhiteSpace(this.txtPassword.Text)) msgList.Add("密碼沒打");
                 else if (string.IsNullOrWhiteSpace(this.txtPWDCheck.Text)) msgList.Add("確認密碼欄位沒打");
                 else if (this.txtPassword.Text.CompareTo(this.txtPWDCheck.Text) != 0) msgList.Add("兩次輸入的密碼不相同");
+                else if (this.txtPassword.Text.Length < 8 || this.txtPassword.Text.Length > 16) msgList.Add("密碼必須在8~16碼之間");
             }
 
             errorMsgList = msgList;

@@ -59,6 +59,7 @@ namespace AccountingNote.SystemAdmin
             }
             else
             {
+                this.ucPager.UCCloser();
                 this.gvAccountingList.Visible = false;
                 this.plcNoData.Visible = true;
             }

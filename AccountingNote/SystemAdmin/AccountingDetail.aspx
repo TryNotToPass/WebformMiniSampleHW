@@ -23,9 +23,9 @@
                 <td style="height: 34px"><asp:TextBox ID="txtDesc" runat="server" TextMode="MultiLine"></asp:TextBox></td>
         </tr>
     </table>
-    <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
+    <asp:Button ID="btnSave" runat="server" Text="存檔" OnClick="btnSave_Click" Font-Size="16"/>
     &nbsp;
-    <asp:Button ID="btnDelete" runat="server" Text="Del" OnClick="btnDelete_Click" />
+    <asp:Button ID="btnDelete" runat="server" Text="刪除" OnClick="btnDelete_Click" Font-Size="16"/>
     <br />
     <asp:Literal ID="ltMsg" runat="server"></asp:Literal>
 

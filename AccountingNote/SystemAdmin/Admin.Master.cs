@@ -14,9 +14,15 @@ namespace AccountingNote.SystemAdmin
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            string account = this.Session["FromUserDetail"] as string;
+            if (account != null && account.CompareTo("yesfromdetail") == 0)  //若使用者是第一位，則破例讓他創
+            {
+                return;
+            }
             // 如果尚未登入，導至登入頁
             if (!AuthManager.IsLogined())                
             {
+                
                 Response.Redirect("/Login.aspx");
                 return;
             }

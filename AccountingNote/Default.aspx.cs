@@ -18,13 +18,15 @@ namespace AccountingNote
             DataTable dtUserinfo = AccountingNote.DBSource.UserInfoManager.GetDataBase("U");
             DataRow drAccStart;
             DataRow drAccLast;
-            if (dtUserinfo == null) 
+            if (dtUserinfo == null || dtUserinfo.Rows.Count == 0) 
             {
                 this.ltmsg.Text = "目前還沒有使用者！";
+                this.Button1.Visible = true;
+                this.loginLink.Visible = false;
                 return;
             }
             
-            if (dtAccStart == null)
+            if (dtAccStart == null || dtAccStart.Rows.Count == 0)
             {
                 this.ltmsg.Text = $"第一筆紀錄日期：尚未存在 <br/>" +
                 $"最近一筆的更新日期：尚未存在 <br/>" +
@@ -41,13 +43,19 @@ namespace AccountingNote
                 $"共{cnt}筆流水帳 <br/>" +
                 $"共{dtUserinfo.Rows.Count}位使用者";
             }
-
+            
             //測試用
             //this.GridView1.DataSource = dtAccStart;
             //this.GridView1.DataBind();
-            
 
 
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            this.Session["FromUserDetail"] = "yesfromdetail";
+            Response.Redirect("/SystemAdmin/UserDetail.aspx");
         }
     }
 }

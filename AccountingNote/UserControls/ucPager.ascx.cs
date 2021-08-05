@@ -62,5 +62,11 @@ namespace AccountingNote.UserControls
                 pagers += 1;
             return pagers;
         }
+
+        public void UCCloser() 
+        {
+            this.aLinkF.Visible = false;
+            this.aLinkL.Visible = false;
+        }
     }
 }

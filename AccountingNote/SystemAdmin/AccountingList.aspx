@@ -7,7 +7,7 @@
         <tr>
             <td>
                 <!--這裡放主要內容-->
-                <asp:Button ID="btnCreate" runat="server" Text="新增流水帳資料" OnClick="btnCreate_Click" />
+                <asp:Button ID="btnCreate" runat="server" Text="新增流水帳資料" OnClick="btnCreate_Click" Font-Size="16"/>
 
                 <asp:GridView ID="gvAccountingList" runat="server" AutoGenerateColumns="False"  OnRowDataBound="gvAccountingList_RowDataBound" CellPadding="4" ForeColor="#333333" GridLines="None">
                     <AlternatingRowStyle BackColor="White" />
@@ -45,8 +45,8 @@
                 <br />
                 <asp:Label ID="Label1" runat="server" Text="總金錢變更：尚無"></asp:Label>
                 <asp:PlaceHolder ID="plcNoData" runat="server" Visible="false">
-                    <p style="color: red; background-color: cornflowerblue">
-                        你的帳戶裡沒有任何資料
+                    <p>
+                        你的帳戶裡沒有任何資料！
                     </p>
                 </asp:PlaceHolder>
             </td>

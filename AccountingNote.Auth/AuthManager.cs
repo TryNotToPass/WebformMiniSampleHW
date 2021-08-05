@@ -67,7 +67,7 @@ namespace AccountingNote.Auth
             if (string.IsNullOrWhiteSpace(account) || 
                 string.IsNullOrWhiteSpace(pwd))
             {
-                errorMsg = "Account / PWD is required.";
+                errorMsg = "尚未輸入帳號或密碼！";
                 return false;
             }
 
@@ -78,7 +78,7 @@ namespace AccountingNote.Auth
             // check null
             if (dr == null)
             {
-                errorMsg = $"Account: {account} doesn't exists.";
+                errorMsg = $"帳戶 {account} 並未存在";
                 return false;
             }
 
@@ -94,7 +94,7 @@ namespace AccountingNote.Auth
             }
             else
             {
-                errorMsg = "Login fail. Please check Account / PWD.";
+                errorMsg = "登入失敗，請檢查輸入資料是否有誤。";
                 return false;
             }
         }

@@ -5,7 +5,7 @@
     <table>
         <tr>
             <td>
-                <table>
+                <table height="200">
                     <tr>
                         <th>帳戶</th>
                         <td><asp:Literal runat="server" ID="ltAccount"></asp:Literal></td>
@@ -22,7 +22,7 @@
                         <td colspan="2"><asp:Literal runat="server" ID="ltMsg"></asp:Literal></td>
                     </tr>
                 </table>
-                <asp:Button runat="server" ID="btnLogout" Text="登出" OnClick="btnLogout_Click" />
+                <asp:Button runat="server" ID="btnLogout" Text="登出" OnClick="btnLogout_Click" Font-Size="16"/>
             </td>
         </tr>
     </table>

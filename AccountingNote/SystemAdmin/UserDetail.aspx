@@ -27,12 +27,12 @@
             <asp:TextBox ID="txtMail" runat="server" TextMode="Email"></asp:TextBox>
         </tr>
     </table>
-                <asp:Button ID="btnSave" runat="server" Text="存檔" OnClick="btnSave_Click" />
+                <asp:Button ID="btnSave" runat="server" Text="存檔" OnClick="btnSave_Click"  Font-Size="16"/>
                 &nbsp;
-                <asp:Button ID="btnDelete" runat="server" Text="刪除" OnClick="btnDelete_Click" />
+                <asp:Button ID="btnDelete" runat="server" Text="刪除" OnClick="btnDelete_Click" Font-Size="16"/>
                 &nbsp;
                 <br />
-                <a href="UserChangePWD.aspx">進入密碼變更頁面</a>
+                <a href="UserChangePWD.aspx" runat="server" ID="pwLink">進入密碼變更頁面</a>
                 <br />
                 <asp:Literal ID="ltMsg" runat="server"></asp:Literal>
 </asp:Content>
