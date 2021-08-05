@@ -16,8 +16,8 @@
             <br />
             <br />
             <a href="Login.aspx">移至登入頁面</a>
-            <p>beta版GV</p>
-            <asp:GridView ID="GridView1" runat="server"></asp:GridView> 
+           <%-- <p>beta版GV</p>
+            <asp:GridView ID="GridView1" runat="server"></asp:GridView> --%>
         </div>
     </form>
 </body>

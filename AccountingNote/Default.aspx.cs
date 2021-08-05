@@ -42,8 +42,9 @@ namespace AccountingNote
                 $"共{dtUserinfo.Rows.Count}位使用者";
             }
 
-            this.GridView1.DataSource = dtAccStart;
-            this.GridView1.DataBind();
+            //測試用
+            //this.GridView1.DataSource = dtAccStart;
+            //this.GridView1.DataBind();
             
 
 
