@@ -13,6 +13,7 @@ namespace AccountingNote
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.Session["FromUserDetail"] = null;
             if (this.Session["UserLoginInfo"] != null)
             {
                 this.plcLogin.Visible = false;
